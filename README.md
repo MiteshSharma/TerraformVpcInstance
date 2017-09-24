@@ -24,3 +24,15 @@ Commands used:
 ./terraform apply : Builds or changes infrastructure
 
 ./terraform destroy : Destroy Terraform-managed infrastructure
+
+Variables are read from variables.tf file. If not specified in that file, parameters are read from following places : 
+
+1. Command line flags
+
+2. File named terraform.tfvars, if name is something else can be provided using command line flag
+
+3. Environment variables
+
+4. UI input (only supports String variables)
+
+Terraform related details : https://www.terraform.io/intro/getting-started/install.html 
