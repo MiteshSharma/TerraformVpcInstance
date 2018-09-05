@@ -2,11 +2,11 @@ output "vpc_id" {
   value = "${aws_vpc.vpc.id}"
 }
 output "public_subnets" {
-  value = ["${aws_subnet.subnet1.id}"]
+  value = ["${aws_subnet.subnet_public.id}"]
 }
 output "public_route_table_ids" {
-  value = ["${aws_route_table.rtb.id}"]
+  value = ["${aws_route_table.rtb_public.id}"]
 }
-output "ec2_eip" {
-  value = ["${aws_eip.ip.public_ip}"]
+output "public_instance_ip" {
+  value = ["${aws_instance.testInstance.public_ip}"]
 }
